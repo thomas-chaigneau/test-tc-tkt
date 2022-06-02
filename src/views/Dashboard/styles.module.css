@@ -9,3 +9,8 @@
 .selectorsContainer {
   display: flex;
 }
+
+.businessListContainer {
+  display: flex;
+  flex-direction: column;
+}

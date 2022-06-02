@@ -1,0 +1,36 @@
+.root {
+  background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.txtCell {
+  flex: 1;
+}
+
+.buttonLikeCell {
+  flex: 1;
+  background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+
+  background: linear-gradient(161.01deg, #01F2CF -8.06%, #99ACFF -8.05%, #4E6EFC 108.81%);
+  border-radius: 5px;
+  max-width: 150px;
+  height: 40px;
+}

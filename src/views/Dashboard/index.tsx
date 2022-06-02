@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import Select, { ISelectOption } from '../../components/Select';
 import LoaderSpinner from '../../components/LoaderSpinner';
+import TableRow from '../../components/TableRow';
 
 import apiService, { IBusinessApiRes } from '../../services/api';
 
@@ -37,8 +38,23 @@ const Dashboard = () => {
     [businessList]
   );
 
-  console.log(businessList);
-  console.log(businessNameFilterOptions);
+  useEffect(() => {
+    const selectedSector = selectedSectorFilter?.label
+    const selectedName = selectedBusinnesNameFilter?.label
+    const filred = businessList.filter(({ sector, name }) => {
+      if (selectedSector && !selectedName) {
+        return sector === selectedSector
+      }
+      if (!selectedSector && selectedName) {
+        return name === selectedName
+      }
+      if (selectedSector && selectedName) {
+        return sector === selectedSector && name === selectedName
+      }
+      return true;
+    })
+    setBusinessList(filred);
+  }, [selectedSectorFilter, selectedBusinnesNameFilter])
 
   return (
     <div className={styles.root}>
@@ -48,21 +64,33 @@ const Dashboard = () => {
       {businessListIsLoading ? (
         <LoaderSpinner loading={businessListIsLoading} />
       ) : (
-      <div className={styles.selectorsContainer}>
-        <Select
-          options={sectorFilterOptions}
-          value={selectedSectorFilter}
-          defaultValue={{ label: 'Secteur...', value: uuidv4()}}
-          onChange={(selected: ISelectOption) => setSelectedSectorFilter(selected)}
-        />
-        <Select
-          options={businessNameFilterOptions}
-          value={selectedBusinnesNameFilter}
-          defaultValue={{ label: 'Business name...', value: uuidv4()}}
-          onChange={(selected: ISelectOption) => setselectedBusinnesNameFilter(selected)}
-        />
-      </div>
+        <div className={styles.selectorsContainer}>
+          <Select
+            options={sectorFilterOptions}
+            value={selectedSectorFilter}
+            defaultValue={{ label: 'Secteur...', value: uuidv4()}}
+            onChange={(selected: ISelectOption) => setSelectedSectorFilter(selected)}
+          />
+          <Select
+            options={businessNameFilterOptions}
+            value={selectedBusinnesNameFilter}
+            defaultValue={{ label: 'Business name...', value: uuidv4()}}
+            onChange={(selected: ISelectOption) => setselectedBusinnesNameFilter(selected)}
+          />
+        </div>
       )}
+      <div className={styles.businessListContainer}>
+        {businessList.map((business) => (
+          <TableRow
+            onClick={() => console.log('click')}
+            rowTemplate={[
+              { type: 'txt', text: business.name },
+              { type: 'txt', text: business.siren.toString() },
+              { type: 'buttonLike', text: business.sector },
+            ]}
+          />
+        ))}
+      </div>
     </div>
   );
 };
