@@ -8,7 +8,7 @@ export interface ISelectOption {
 }
 
 export interface ISelectProps {
-  value: ISelectOption | null;
+  value: ISelectOption | undefined;
   options: OptionsOrGroups<ISelectOption, GroupBase<ISelectOption>>;
   defaultValue: ISelectOption;
   onChange: any;

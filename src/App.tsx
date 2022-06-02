@@ -1,4 +1,3 @@
-import React from 'react';
 import Dashboard from './views/Dashboard';
 import Navbar from './views/Navbar';
 
