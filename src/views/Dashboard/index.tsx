@@ -16,6 +16,8 @@ const Dashboard = () => {
   const [businessList, setBusinessList] = useState<IBusinessApiRes[]>([]);
   const [businessListIsLoading, setBusinessListIsLoading] = useState<boolean>(false);
 
+  const [filteredBusinessList, setFilteredBusinessList] = useState<IBusinessApiRes[]>([]);
+
   const [selectedSectorFilter, setSelectedSectorFilter] = useState<ISelectOption | undefined>(undefined);
   const [selectedBusinnesNameFilter, setselectedBusinnesNameFilter] = useState<ISelectOption | undefined>(undefined);
 
@@ -53,8 +55,8 @@ const Dashboard = () => {
       }
       return true;
     })
-    setBusinessList(filred);
-  }, [selectedSectorFilter, selectedBusinnesNameFilter])
+    setFilteredBusinessList(filred);
+  }, [businessList, selectedSectorFilter, selectedBusinnesNameFilter])
 
   return (
     <div className={styles.root}>
@@ -80,8 +82,9 @@ const Dashboard = () => {
         </div>
       )}
       <div className={styles.businessListContainer}>
-        {businessList.map((business) => (
+        {filteredBusinessList.map((business) => (
           <TableRow
+            key={business.id}
             onClick={() => console.log('click')}
             rowTemplate={[
               { type: 'txt', text: business.name },

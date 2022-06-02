@@ -1,4 +1,5 @@
 
+import { v4 as uuidv4 } from 'uuid';
 import styles from './styles.module.css';
 
 export interface ITableCellTemplate {
@@ -15,10 +16,10 @@ export interface ITableRowProps {
 const TableRow = ({ rowTemplate, onClick }: ITableRowProps) => {
   const createCellFromTemplate = (template: ITableCellTemplate) => {
     if (template.type === 'txt') return (
-      <div className={styles.txtCell}>{template.text}</div>
+      <div key={uuidv4()} className={styles.txtCell}>{template.text}</div>
     )
     if (template.type === 'buttonLike') return (
-      <button className={styles.buttonLikeCell}>{template.text}</button>
+      <button  key={uuidv4()} className={styles.buttonLikeCell}>{template.text}</button>
     )
     return null;
   }
