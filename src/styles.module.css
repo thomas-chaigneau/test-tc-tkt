@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+}
+
+.navbarContainer {
+  width: 20%;
+}
+
+.dashboardContainer {
+  width: 80%;
+}
+
+@media (max-width: 500px) {
+  .root {
+    display: block;
+  }
+}

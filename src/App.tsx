@@ -1,10 +1,18 @@
 import React from 'react';
 import Dashboard from './views/Dashboard';
+import Navbar from './views/Navbar';
 
-function App() {
+import styles from './styles.module.css';
+
+const App = () => {
   return (
-    <div className="App">
-      <Dashboard />
+    <div className={styles.root}>
+      <div className={styles.navbarContainer}>
+        <Navbar />
+      </div>
+      <div className={styles.dashboardContainer}>
+        <Dashboard />
+      </div>
     </div>
   );
 }
