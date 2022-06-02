@@ -5,6 +5,7 @@ import { ImSearch as search } from 'react-icons/im';
 import styles from './styles.module.css';
 
 export interface INavButtonProps {
+  key: string;
   text: string;
   iconName: 'dashboard' | 'clock' | 'search';
   onClick: React.MouseEventHandler<HTMLButtonElement>;

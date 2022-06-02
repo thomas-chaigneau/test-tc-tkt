@@ -1,0 +1,11 @@
+.root {
+  padding: 50px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.selectorsContainer {
+  display: flex;
+}
