@@ -1,5 +1,5 @@
 import Dashboard from './views/Dashboard';
-import Navbar from './views/Navbar';
+import Navbar from './components/Navbar';
 
 import styles from './styles.module.css';
 

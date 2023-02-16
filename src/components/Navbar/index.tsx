@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 
-import NavButton, { INavButtonProps } from '../../components/NavButton';
+import NavButton, { INavButtonProps } from '../NavButton';
 
 import styles from './styles.module.css';
 

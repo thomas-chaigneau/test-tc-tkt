@@ -1,47 +1,31 @@
-# Getting Started with Create React App
+## Launch Scripts
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To start project run:
 
-## Available Scripts
-
-In the project directory, you can run:
-
+### `npm i`
 ### `npm start`
 
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+Le projet est composé d'une page principale (Dashboard)
+L'ébauche d'autres pages sont également disponible (Account, Settings)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Un Service http pour faire des requête à une API est déjà configuré.
 
-### `npm run build`
+Quelques composant UI sont également fait
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `To do`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+L'exercice consiste en 4 points:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Sur la page Dashboard, ajouter un bouton qui permet de reset les filtres et d'afficher à nouveau la liste de tous les business.
 
-### `npm run eject`
+Sur le projet, ajouter un rooting pour qu'au click sur les éléments de la navBar, on soit redirigé vers les pages correspondantes (Dashboard, Account, Settings). Si la page est rafraichie alors qu'on est sur Account, on doit retomber sur Account.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Sur la page Dashboard, il faut qu'au click sur une ligne "business", la modale qui affiche le composant BusinessDetailCard affiche les informations du business séléctionné. Ils sont numeroté par des entier de 1 à 2000 environs. Vous êtes libre de vous servir de l'existant sur le composant BusinessDetailCard.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Sur la page BusinessDetailPage, ajouter un bouton 'Businnes suivant' qui permet d'afficher les informations de la business suivante.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-# test-tc-tkt
+Vous pouvez par exemple utiliser: [reactrouter](https://reactrouter.com/en/main) to

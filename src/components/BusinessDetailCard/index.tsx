@@ -4,10 +4,10 @@ import apiService from '../../services/api';
 
 import styles from './styles.module.css';
 
-const BusinessDetailPage = () => {
+const BusinessDetailPage = ({ id }: { id?: number}) => {
 
-  const [selectedBusiness, setselectedBusiness] = useState<any>(null);
-  const [selectedBusinessIsLoading, setselectedBusinessIsLoading] = useState<boolean>(false);
+    const [selectedBusiness, setselectedBusiness] = useState<any>(null);
+    const [selectedBusinessIsLoading, setselectedBusinessIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setselectedBusinessIsLoading(true);
@@ -17,6 +17,7 @@ const BusinessDetailPage = () => {
       .finally(() => setselectedBusinessIsLoading(false))
   }, [])
 
+  console.log({ id });
   console.log({selectedBusinessIsLoading});
   console.log(selectedBusiness);
 
