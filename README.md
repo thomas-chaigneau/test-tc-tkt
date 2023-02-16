@@ -1,15 +1,15 @@
 ## Quiz Romm
-##
-## Test teschnique
+
+
+
+
+## Test technique
 
 To start project run:
 
-### `npm i`
-### `npm start`
+1- `npm i`
+2- `npm start`
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
 
 Le projet est composé d'une page principale (Dashboard).
 Les ébauches d'autres pages sont également disponibles (Account, Settings)
