@@ -2,10 +2,10 @@
 
 ## Test technique
 
-To start project run:
+Pour lancer le projet, clonnez le et lancez le grace à:
 
-1. npm i
-2. npm start
+2. npm i
+3. npm start
 
 
 Le projet est composé d'une page principale (Dashboard).
