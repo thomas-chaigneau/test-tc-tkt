@@ -1,5 +1,3 @@
-# Quiz Romm
-
 ## Test technique
 
 Pour lancer le projet, clonnez le et lancez le grace à:
