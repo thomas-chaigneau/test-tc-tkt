@@ -1,14 +1,11 @@
-## Quiz Romm
-
-
-
+# Quiz Romm
 
 ## Test technique
 
 To start project run:
 
-1- `npm i`
-2- `npm start`
+1. npm i
+2. npm start
 
 
 Le projet est composé d'une page principale (Dashboard).
